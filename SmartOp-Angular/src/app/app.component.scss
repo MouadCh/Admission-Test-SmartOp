@@ -1,0 +1,22 @@
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.scss';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.server-scrolling-demo {
+    width: 94%;
+    height: calc(100vh - 180px);
+  }
+  
+  ::ng-deep .progress-linear {
+    position: fixed !important;
+    bottom: 0px;
+  }

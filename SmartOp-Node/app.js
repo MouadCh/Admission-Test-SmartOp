@@ -11,7 +11,6 @@ const app = express();
 
 const DATABSE_NAME        = "SmartOp";
 const DATABSE_COLLECTION  = "Medical-Dataset";
-const DATABSE_COLLECTION_CLEAN  = "Medical-Dataset-Clean";
 const DATABSE_USERNAME    = "mouad";
 const DATABASAE_URL       = 'mongodb+srv://'+DATABSE_USERNAME+':mouad123@cluster0.upjva.azure.mongodb.net/'+DATABSE_NAME+'?retryWrites=true&w=majority';
 const CSV_PATH            = "interventions.csv";
@@ -162,6 +161,7 @@ function GetCleanData(data){
             anesthesiste    : FavouriteValue(element.anesthsistes),
             nurse           : FavouriteValue(element.nurses),
             roomNumber      : FavouriteValue(element.roomNumbers),
+            intervention    : FavouriteValue(element.interventions),
             interventions   : (element.interventions.length),
         }
         csvCleanData.push(record);
