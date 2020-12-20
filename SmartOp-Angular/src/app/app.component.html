@@ -10,7 +10,7 @@
         placeholder="Trouver un chirurgien..."
         (keyup)="updateFilter($event)"
     />
-    <span *ngIf="!isSearch" style="margin-left: -51px; color:#488bde"><button><fa-icon [icon]="faSearch"></fa-icon></button></span>
+    <span *ngIf="!isSearch" style="margin-left: -28px; color:#488bde"><fa-icon [icon]="faSearch"></fa-icon></span>
     <span *ngIf="isSearch" style="margin-left: -51px;"><button (click)="Initialize()"><fa-icon style=" color: crimson" [icon]="faTimesCircle"></fa-icon></button></span>
     <span><button (click)="Initialize()"><fa-icon [icon]="faRefresh"></fa-icon></button></span>
   </div>

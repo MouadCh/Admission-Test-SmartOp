@@ -19,4 +19,8 @@ export class MockServerResultsServiceService {
     return this.http.get(this.URL_BACKEND+"api/data?skip="+offset+"&limit="+limit);
   }
 
+  public getSurgeont(surgeonTxt:string) {
+    return this.http.get(this.URL_BACKEND+"api/chirurgien?chirurgien="+surgeonTxt);
+  }
+
 }

@@ -56,6 +56,12 @@ export class AppComponent {
 
   //Search Functions
   updateFilter(event) {
+
+    // update the rows
+    this.isLoading=true;
+    this.rows = [];
+
+    //Get search Value
     const val = event.target.value.toLowerCase();
     if(val.length > 0){
       this.isSearch = true;
@@ -63,11 +69,16 @@ export class AppComponent {
       // const temp = this.temp.filter(function (d) {
       //   return d.name.toLowerCase().indexOf(val) !== -1 || !val;
       // });
+      this.serverResultsService.getSurgeont(val).subscribe( (result:MyModel[])=>{
+        
+        this.isLoading=false;
 
-      // update the rows
-      this.rows = [];
-      // Whenever the filter changes, always go back to the first page
-      this.table.offset = 0;
+        // Whenever the filter changes, always go back to the first page
+        this.table.offset = 0;
+
+        //Update Data
+        this.rows=result;
+      });
     }else{
       this.Initialize();
     }

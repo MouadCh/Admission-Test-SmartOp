@@ -16,6 +16,7 @@
         border-radius: 16px;
         box-shadow: 1px 1px 8px rgba(204, 204, 204, 0.598);
         width:30%;
+        min-width: 200px;
         padding:8px;
         margin:15px auto;
         font-size: small;
@@ -64,7 +65,7 @@
     .server-scrolling-demo {
         position: relative;
         width: 94%;
-        height: calc(100vh - 220px);
+        height: 485px;
         border-radius: 10px;
 
         box-shadow: 1px 1px 8px rgba(204, 204, 204);
