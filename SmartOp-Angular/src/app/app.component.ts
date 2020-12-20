@@ -4,6 +4,7 @@ import { MyModel } from './model/myModel';
 // import data from 'src/assets/data/company.json';
 import { ColumnMode, DatatableComponent } from '@swimlane/ngx-datatable';
 import { MockServerResultsServiceService } from './mock-server-results-service.service';
+import {  faSearch, faSyncAlt, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -12,6 +13,9 @@ import { MockServerResultsServiceService } from './mock-server-results-service.s
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  faSearch = faSearch;
+  faRefresh = faSyncAlt;
 
   readonly headerHeight = 50;
   readonly rowHeight = 50;
@@ -26,7 +30,7 @@ export class AppComponent {
     { name: 'Salle la plus fréquente' ,prop: 'roomNumber'},
     { name: 'Acte le plus fréquent'   ,prop: 'intervention'}
   ];
-  
+
   rows: MyModel[]= [];
   temp: MyModel[]= [];
   isLoading: boolean;
@@ -43,6 +47,8 @@ export class AppComponent {
   Initialize(){
     this.rows = [];
     this.temp = [];
+    (<HTMLInputElement>document.getElementById("search")).value ="";
+    this.faSearch = faSearch;
     this.onScroll(0);
   }
 
@@ -50,6 +56,7 @@ export class AppComponent {
   updateFilter(event) {
     const val = event.target.value.toLowerCase();
     if(val.length > 0){
+      this.faSearch = faTimesCircle;
       // filter our data
       // const temp = this.temp.filter(function (d) {
       //   return d.name.toLowerCase().indexOf(val) !== -1 || !val;

@@ -199,7 +199,7 @@ function FirstRecordNoNull(array){
     for(var i = 0; i < array.length; i++)
         if( array[i] != "" && array[i] != undefined )
             return array[i];
-    return "";
+    return "Pas d'anesthésiste";
 }
 
 module.exports = app;

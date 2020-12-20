@@ -1,5 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/bootstrap.scss';
+@import '~@swimlane/ngx-datatable/themes/material.scss';
+@import '~@swimlane/ngx-datatable/themes/dark.scss';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+
+@font-face {
+    font-family: "Avenir";
+    src: url("./assets/Metropolis/Metropolis-Light.otf");
+}
 
 body{
-    background-color: azure;
+    background-color: #edf2f7;
+    font-family: "Avenir" ;
 }

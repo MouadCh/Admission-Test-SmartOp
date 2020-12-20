@@ -1,31 +1,37 @@
 
-<div class="container">
-  <h3>
-    Server-side Scrolling
-    <small>
-      <a
-        href="https://github.com/swimlane/ngx-datatable/blob/master/src/app/paging/scrolling-server.component.ts"
-        target="_blank"
-      >
-        Source
-      </a>
-    </small>
-  </h3>
-  <input
-      type="text"
-      style="padding:8px;margin:15px auto;width:30%;"
-      placeholder="Type to filter the name column..."
-      (keyup)="updateFilter($event)"
+<div class="header">
+  <h4 class="Title">
+    Smart-Op Datatable Test
+  </h4>
+  <div class="Search">
+    <input  
+        id="search"
+        type="text"
+        placeholder="Trouver un chirurgien..."
+        (keyup)="updateFilter($event)"
     />
-  <ngx-datatable
-    class="material dark server-scrolling-demo"
-    [rows]="rows"
-    [columns]="myColumns"
-    [columnMode]="ColumnMode.force"
-    [headerHeight]="headerHeight"
-    [rowHeight]="rowHeight"
-    [loadingIndicator]="isLoading"
-    [scrollbarV]="true"
-    (scroll)="onScroll($event.offsetY)"
-  ></ngx-datatable>
+    <span style="margin-left: -30px; color:#488bde"><fa-icon [icon]="faSearch"></fa-icon></span>
+    <span><button (click)="Initialize()"><fa-icon [icon]="faRefresh"></fa-icon></button></span>
+  </div>
+  
 </div>
+
+<div class="Mycontainer">
+  <ngx-datatable
+      class="material server-scrolling-demo"
+      [rows]="rows"
+      [columns]="myColumns"
+      [columnMode]="ColumnMode.force"
+      [headerHeight]="headerHeight"
+      [rowHeight]="rowHeight"
+      [loadingIndicator]="isLoading"
+      [scrollbarV]="true"
+      (scroll)="onScroll($event.offsetY)"
+  >
+</ngx-datatable>
+
+</div>
+
+<footer>
+  <p  class="text-xs-center">Made by CHAOUKI Mouad © 2020.</p>
+</footer>

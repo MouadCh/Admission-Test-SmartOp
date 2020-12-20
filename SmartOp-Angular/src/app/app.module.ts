@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { HttpClientModule } from '@angular/common/http';
-import { MyModel } from './model/myModel';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -12,6 +12,7 @@ import { MyModel } from './model/myModel';
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     NgxDatatableModule.forRoot({
       messages: {
         emptyMessage: 'No data to display', // Message to show when array is presented, but contains no values

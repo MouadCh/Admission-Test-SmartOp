@@ -1,22 +1,96 @@
-@import '~@swimlane/ngx-datatable/index.css';
-@import '~@swimlane/ngx-datatable/themes/material.scss';
-@import '~@swimlane/ngx-datatable/assets/icons.css';
 
+.header{
+    margin-left: 3%;
+    margin-bottom: 20px;
 
-.container{
+    .Title{
+        margin-top: 30px;
+        margin-bottom: 18px;
+
+        padding-bottom: 5px;
+
+        border-bottom: 1px solid rgb(209, 216, 228);
+    }
+
+    input{
+        border-radius: 16px;
+        box-shadow: 1px 1px 8px rgba(204, 204, 204, 0.598);
+        width:30%;
+        padding:8px;
+        margin:15px auto;
+        font-size: small;
+        margin-bottom: 0px;
+        outline: none;
+        border: none;
+    }
+
+    input:focus{
+        outline: none;
+    }
+
+    button {
+        outline:none;
+        border: none;
+        height: 35px;
+        width: 35px;
+
+        margin-left: 30px;
+
+        border-radius:50%;
+        box-shadow: 1px 1px 8px rgba(204, 204, 204, 0.998);
+        background: #fff;
+        color: #488bde;
+        letter-spacing:1px;
+        text-shadow:0;
+
+        
+        cursor: pointer;
+        transition: all 0.25s ease;
+        &:hover {
+          color: rgba(255, 166, 0, 0.611);
+          background: #f3f7fc;
+        }
+      }
+}
+
+.Mycontainer{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     justify-items: center;
     align-items: center;
-}
 
-.server-scrolling-demo {
-    width: 94%;
-    height: calc(100vh - 180px);
-  }
+    .server-scrolling-demo {
+        position: relative;
+        width: 94%;
+        height: calc(100vh - 220px);
+        border-radius: 10px;
+
+        box-shadow: 1px 1px 8px rgba(204, 204, 204);
+
+    }
   
-  ::ng-deep .progress-linear {
+  ::ng-deep .progress-linear     {
     position: fixed !important;
     bottom: 0px;
+    background-color: orange;
   }
+
+  ::ng-deep .datatable-header .datatable-header-cell, ::ng-deep .datatable-header {
+      background-color: #f3f7fc;
+      color: black;
+      font-weight: bold;
+  }
+
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    font-size: small;
+    text-align: center;
+}
