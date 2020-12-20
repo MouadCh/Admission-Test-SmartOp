@@ -1,25 +1,61 @@
 
 .header{
-    margin-left: 3%;
+    padding-left: 3%;
     margin-bottom: 20px;
 
+    width: 100%;
+
+    background-color: #fcfcfc;
+
     .Title{
-        margin-top: 20px;
-        margin-bottom: 10px;
+        padding-top: 20px;
+        padding-bottom: 10px;
 
         border-bottom: 1px solid rgb(235, 235, 235);
     }
 
+}
+
+.Mycontainer{
+
+    background-color: white;
+    width: 94%;
+    margin-left: 3%;
+
+    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    .TableHeader{
+        display: flex; 
+        justify-content: space-between;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .TableHeader p{
+        margin-top: 15px;
+        font-weight: 500;
+        font-size: 18px;
+        font-style: normal;
+    }
+
+    .Search{
+        padding:6px;
+    }
+    
     input{
         border-radius: 16px;
         box-shadow: 1px 1px 8px rgba(182, 182, 182, 0.698);
+
         width:30%;
         min-width: 200px;
         padding:8px;
-        margin:15px auto;
+        margin:5px auto;
+
         font-size: small;
-        margin-bottom: 0px;
         outline: none;
+
         border: none;
     }
 
@@ -50,22 +86,14 @@
           background: #f3f7fc;
         }
       }
-}
-
-.Mycontainer{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
 
     .server-scrolling-demo {
         position: relative;
-        width: 94%;
+        // width: 94%;
         height: 485px;
         border-radius: 10px;
-
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
         box-shadow: 1px 1px 8px rgba(204, 204, 204);
 
     }
@@ -85,7 +113,7 @@
 }
 
 footer {
-    position: absolute;
+    position: relative;
     right: 0;
     bottom: 0;
     left: 0;

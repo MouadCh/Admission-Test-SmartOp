@@ -2,22 +2,24 @@
 <div class="header">
   <h4 class="Title">
     <img src="../assets/logo.png" width="120" alt=""> Datatable Test
-  </h4>
-  <div class="Search">
-    <input  
-        id="search"
-        type="text"
-        placeholder="Trouver un chirurgien..."
-        (keyup)="updateFilter($event)"
-    />
-    <span *ngIf="!isSearch" style="margin-left: -28px; color:#488bde"><fa-icon [icon]="faSearch"></fa-icon></span>
-    <span *ngIf="isSearch" style="margin-left: -28px;"><fa-icon (click)="Initialize()" style=" color: crimson" [icon]="faTimesCircle"></fa-icon></span>
-    <span><button (click)="Initialize()"><fa-icon [icon]="faRefresh"></fa-icon> </button><small></small></span>
-  </div>
-  
+  </h4>  
 </div>
 
 <div class="Mycontainer">
+  <div class="TableHeader">
+    <p >Tableaux des chirurgiens</p>
+    <div class="Search">
+      <input  
+          id="search"
+          type="text"
+          placeholder="Trouver un chirurgien..."
+          (keyup)="updateFilter($event)"
+      />
+      <span *ngIf="!isSearch" style="margin-left: -28px; color:#488bde"><fa-icon [icon]="faSearch"></fa-icon></span>
+      <span *ngIf="isSearch" style="margin-left: -28px;"><fa-icon (click)="Initialize()" style=" color: crimson" [icon]="faTimesCircle"></fa-icon></span>
+      <span><button (click)="Initialize()"><fa-icon [icon]="faRefresh"></fa-icon> </button><small></small></span>
+    </div>
+  </div>
   <ngx-datatable
       class="material server-scrolling-demo"
       [rows]="rows"
