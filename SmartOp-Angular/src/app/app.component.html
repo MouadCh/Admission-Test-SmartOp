@@ -1,7 +1,7 @@
 
 <div class="header">
   <h4 class="Title">
-    Smart-Op Datatable Test
+    <img src="../assets/logo.png" width="120" alt=""> Datatable Test
   </h4>
   <div class="Search">
     <input  
@@ -11,8 +11,8 @@
         (keyup)="updateFilter($event)"
     />
     <span *ngIf="!isSearch" style="margin-left: -28px; color:#488bde"><fa-icon [icon]="faSearch"></fa-icon></span>
-    <span *ngIf="isSearch" style="margin-left: -51px;"><button (click)="Initialize()"><fa-icon style=" color: crimson" [icon]="faTimesCircle"></fa-icon></button></span>
-    <span><button (click)="Initialize()"><fa-icon [icon]="faRefresh"></fa-icon></button></span>
+    <span *ngIf="isSearch" style="margin-left: -28px;"><fa-icon (click)="Initialize()" style=" color: crimson" [icon]="faTimesCircle"></fa-icon></span>
+    <span><button (click)="Initialize()"><fa-icon [icon]="faRefresh"></fa-icon> </button><small></small></span>
   </div>
   
 </div>

@@ -4,17 +4,15 @@
     margin-bottom: 20px;
 
     .Title{
-        margin-top: 30px;
-        margin-bottom: 18px;
+        margin-top: 20px;
+        margin-bottom: 10px;
 
-        padding-bottom: 5px;
-
-        border-bottom: 1px solid rgb(209, 216, 228);
+        border-bottom: 1px solid rgb(235, 235, 235);
     }
 
     input{
         border-radius: 16px;
-        box-shadow: 1px 1px 8px rgba(204, 204, 204, 0.598);
+        box-shadow: 1px 1px 8px rgba(182, 182, 182, 0.698);
         width:30%;
         min-width: 200px;
         padding:8px;
@@ -38,7 +36,7 @@
         margin-left: 18px;
 
         border-radius:50%;
-        box-shadow: 1px 1px 8px rgba(204, 204, 204, 0.998);
+        box-shadow: 1px 1px 8px rgba(194, 194, 194, 0.998);
         background: #fff;
         color: #488bde;
         letter-spacing:1px;
@@ -93,5 +91,6 @@ footer {
     left: 0;
     padding: 1rem;
     font-size: small;
+    font-weight: bolder;
     text-align: center;
 }

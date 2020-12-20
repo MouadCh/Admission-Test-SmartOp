@@ -23,13 +23,13 @@ export class AppComponent {
   readonly pageLimit = 10;
 
   myColumns=[ 
-    { name: 'Nom du chirurgien'       ,prop: 'surgeon' },
-    { name: 'Spécialité'              ,prop: 'specialty'},
-    { name: 'Nombre d’interventions'  ,prop: 'interventions' },
-    { name: 'Anesthésiste favori '    ,prop: 'anesthesiste'}, 
-    { name: 'Infirmière favorite'     ,prop: 'nurse'}, 
-    { name: 'Salle la plus fréquente' ,prop: 'roomNumber'},
-    { name: 'Acte le plus fréquent'   ,prop: 'intervention'}
+    { name: 'Nom du chirurgien'       ,prop: 'surgeon'      ,canAutoResize:true},
+    { name: 'Spécialité'              ,prop: 'specialty'    ,canAutoResize:true},
+    { name: 'Nombre d’interventions'  ,prop: 'interventions',canAutoResize:true },
+    { name: 'Anesthésiste favori '    ,prop: 'anesthesiste' ,canAutoResize:true}, 
+    { name: 'Infirmière favorite'     ,prop: 'nurse'        ,canAutoResize:true}, 
+    { name: 'Salle la plus fréquente' ,prop: 'roomNumber'   ,canAutoResize:true},
+    { name: 'Acte le plus fréquent'   ,prop: 'intervention' ,canAutoResize:true}
   ];
 
   rows: MyModel[]= [];
@@ -57,14 +57,15 @@ export class AppComponent {
   //Search Functions
   updateFilter(event) {
 
-    // update the rows
-    this.isLoading=true;
-    this.rows = [];
+
 
     //Get search Value
     const val = event.target.value.toLowerCase();
     if(val.length > 0){
       this.isSearch = true;
+      // update the rows
+      this.isLoading=true;
+      this.rows = [];
       // filter our data
       // const temp = this.temp.filter(function (d) {
       //   return d.name.toLowerCase().indexOf(val) !== -1 || !val;
@@ -79,7 +80,7 @@ export class AppComponent {
         //Update Data
         this.rows=result;
       });
-    }else{
+    }else{      
       this.Initialize();
     }
   }
