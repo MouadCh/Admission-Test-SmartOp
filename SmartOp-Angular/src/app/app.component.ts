@@ -16,6 +16,7 @@ export class AppComponent {
 
   faSearch = faSearch;
   faRefresh = faSyncAlt;
+  faTimesCircle = faTimesCircle;
 
   readonly headerHeight = 50;
   readonly rowHeight = 50;
@@ -34,6 +35,7 @@ export class AppComponent {
   rows: MyModel[]= [];
   temp: MyModel[]= [];
   isLoading: boolean;
+  isSearch: boolean;
 
   ColumnMode = ColumnMode;
   @ViewChild(DatatableComponent) table: DatatableComponent;
@@ -48,7 +50,7 @@ export class AppComponent {
     this.rows = [];
     this.temp = [];
     (<HTMLInputElement>document.getElementById("search")).value ="";
-    this.faSearch = faSearch;
+    this.isSearch = false;
     this.onScroll(0);
   }
 
@@ -56,7 +58,7 @@ export class AppComponent {
   updateFilter(event) {
     const val = event.target.value.toLowerCase();
     if(val.length > 0){
-      this.faSearch = faTimesCircle;
+      this.isSearch = true;
       // filter our data
       // const temp = this.temp.filter(function (d) {
       //   return d.name.toLowerCase().indexOf(val) !== -1 || !val;

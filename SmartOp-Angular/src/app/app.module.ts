@@ -15,7 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule,
     NgxDatatableModule.forRoot({
       messages: {
-        emptyMessage: 'No data to display', // Message to show when array is presented, but contains no values
+        emptyMessage: 'Aucune données trouvés!', // Message to show when array is presented, but contains no values
         totalMessage: 'total', // Footer total message
         selectedMessage: 'selected' // Footer selected message
       }

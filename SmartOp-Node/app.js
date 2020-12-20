@@ -47,6 +47,22 @@ app.use('/api/data', (req, res, next) => {
       });
   });
 
+app.use('/api/chirurgien', (req, res, next) => {
+    //Get Data of a surgeon
+    const chirurgien = req.query.chirurgien;
+    mongodbClient.connect(DATABASAE_URL, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db(DATABSE_NAME);
+        //Get All data then get the clean data selon les critères
+        var query = { "surgeon":  {$regex: chirurgien , $options: 'i'}  };
+        dbo.collection(DATABSE_COLLECTION).find(query).toArray(function(err, result) {
+          if (err) throw err;
+          res.status(200).json( GetCleanData(result) );
+          db.close();
+        });
+      });
+  });
+
   app.get('/api/UpdateMongoDB', (req, res, next) => {
 
     // To Remove All rows Collection
